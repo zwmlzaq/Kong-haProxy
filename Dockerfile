@@ -7,7 +7,6 @@ EXPOSE 443
 EXPOSE 444
 EXPOSE 8080
 
-COPY ssh-key/server.crt /certs/server.crt
-COPY ssh-key/server.nopwd.key /certs/server.key
+COPY ssh-key/server.pem /certs/server.pem
 
 CMD ["docker-flow-proxy", "server"]
